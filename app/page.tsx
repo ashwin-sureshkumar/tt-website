@@ -19,12 +19,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <TrustSignals />
       <Services />
       <IndustriesOverview />
       <About />
       <QualityAssurance />
       <Gallery />
-      <TrustSignals />
       <CTASection />
     </main>
   );
