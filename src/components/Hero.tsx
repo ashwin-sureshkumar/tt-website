@@ -33,17 +33,6 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex flex-col items-center gap-3">
-            <img
-              src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
-              alt="AS9100 Aerospace Certification"
-              className="w-24 h-auto"
-            />
-            <div className="text-center text-white">
-              <div className="text-sm font-bold">AS9100 Rev D</div>
-              <div className="text-xs text-gray-300">ISO 9001:2015</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

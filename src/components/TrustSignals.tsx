@@ -22,6 +22,11 @@ export function TrustSignals() {
             alt="Ontario Made - Certified Ontario Manufacturer"
             className="h-20 w-auto"
           />
+          <img
+            src="/assets/ctma-logo.jpg"
+            alt="CTMA - Canadian Tooling & Machining Association"
+            className="h-12 w-auto"
+          />
         </div>
       </div>
     </section>
