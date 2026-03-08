@@ -38,7 +38,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-3">
             <img
               src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
               alt="AS9100 Aerospace Certification"
