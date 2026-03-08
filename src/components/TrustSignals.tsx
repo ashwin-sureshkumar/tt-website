@@ -9,17 +9,17 @@ export function TrustSignals() {
           <img
             src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
             alt="NQA AS9100 Rev D Aerospace & Defense Certification - ISO 9001:2015"
-            className="h-12 md:h-20 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
           <img
             src="/assets/ontario-made-logo.png"
             alt="Ontario Made - Certified Ontario Manufacturer"
-            className="h-10 md:h-20 w-auto"
+            className="h-14 md:h-20 w-auto"
           />
           <img
             src="/assets/ctma-logo.jpg"
             alt="CTMA - Canadian Tooling & Machining Association"
-            className="h-6 md:h-12 w-auto"
+            className="h-8 md:h-12 w-auto"
           />
         </div>
       </div>
