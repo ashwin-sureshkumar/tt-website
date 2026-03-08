@@ -4,7 +4,7 @@ import { industryLinks } from "@/lib/navigation";
 import { Cog, Gauge, Layers, Target } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "CNC Machining Services",
+  title: "CNC Machining Services | 5-Axis Milling & Turning",
   description:
     "Precision CNC machining services including lathe turning, 3-5 axis milling, and complex part manufacturing. Tight tolerances, superior surface finishes. AS9100 certified.",
   path: "/services/cnc-machining",

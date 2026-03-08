@@ -4,7 +4,7 @@ import { industryLinks } from "@/lib/navigation";
 import { FileSearch, ClipboardCheck, Package, MessageSquare } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "Engineering Services",
+  title: "Engineering Services | DFM Consultation & Support",
   description:
     "Expert engineering services including DFM consultation, deviation handling, material procurement, and design optimization for precision manufacturing.",
   path: "/services/engineering-service",

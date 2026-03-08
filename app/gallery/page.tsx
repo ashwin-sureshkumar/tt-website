@@ -6,7 +6,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Gallery",
+  title: "Gallery | Precision CNC Machined Components",
   description:
     "Browse examples of precision-machined components by Tru-Tech Precision Inc. Aerospace brackets, CNC machined shafts, custom metal parts, and more.",
   path: "/gallery",

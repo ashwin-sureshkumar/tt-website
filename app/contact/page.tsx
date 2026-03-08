@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
 
 export const metadata = createMetadata({
-  title: "Contact Us",
+  title: "Contact Tru-Tech Precision | Request a CNC Machining Quote",
   description:
     "Contact Tru-Tech Precision Inc. for precision CNC machining quotes. Call (905) 828-5055 or email sales@trutechprecision.com. Located in Mississauga, Ontario.",
   path: "/contact",

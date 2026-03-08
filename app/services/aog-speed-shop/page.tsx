@@ -4,7 +4,7 @@ import { industryLinks } from "@/lib/navigation";
 import { Zap, Clock, Plane, Phone } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "AOG & Speed Shop Service",
+  title: "AOG & Speed Shop | Emergency CNC Machining Service",
   description:
     "Rapid turnaround CNC machining for AOG (Aircraft on Ground) emergencies and urgent manufacturing needs. 24-48 hour turnaround available.",
   path: "/services/aog-speed-shop",

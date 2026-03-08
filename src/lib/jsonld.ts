@@ -19,7 +19,7 @@ export function organizationSchema() {
     },
     telephone: "(905) 828-5055",
     email: "sales@trutechprecision.com",
-    sameAs: [],
+    sameAs: ["https://www.linkedin.com/company/tru-tech-precision/"],
   };
 }
 
@@ -74,5 +74,46 @@ export function faqSchema(
         text: item.answer,
       },
     })),
+  };
+}
+
+export function articleSchema({
+  title,
+  description,
+  path,
+  date,
+  image,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  date: string;
+  image: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    image,
+    datePublished: date,
+    dateModified: date,
+    author: {
+      "@type": "Organization",
+      name: "Tru-Tech Precision Inc.",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tru-Tech Precision Inc.",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/assets/af8bb2b29d9184d4d83751d1fa438bea1a181d56.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${path}`,
+    },
   };
 }

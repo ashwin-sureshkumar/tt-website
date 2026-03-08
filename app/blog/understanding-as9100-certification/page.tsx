@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { BreadcrumbNav } from "@/components/BreadcrumbNav";
 import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
+import { breadcrumbSchema, webPageSchema, articleSchema } from "@/lib/jsonld";
 import { createMetadata } from "@/lib/metadata";
 import { blogPosts, formatDate } from "@/lib/blog";
 import Link from "next/link";
@@ -33,6 +33,15 @@ export default function AS9100Article() {
           { name: post.title, href: `/blog/${post.slug}` },
         ])}
       />
+      <JsonLd
+        data={articleSchema({
+          title: post.title,
+          description: post.description,
+          path: `/blog/${post.slug}`,
+          date: post.date,
+          image: post.image,
+        })}
+      />
 
       <PageHeader title={post.title} />
       <BreadcrumbNav
@@ -53,6 +62,15 @@ export default function AS9100Article() {
             <span className="bg-[#17135F]/10 text-[#17135F] px-3 py-0.5 rounded font-medium">
               {post.category}
             </span>
+          </div>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 bg-[#17135F] rounded-full flex items-center justify-center">
+              <span className="text-white text-sm font-bold">TT</span>
+            </div>
+            <div>
+              <div className="text-sm font-medium text-gray-900">Tru-Tech Precision</div>
+              <div className="text-xs text-gray-500">Engineering Team</div>
+            </div>
           </div>
 
           <article className="prose prose-lg max-w-none">
@@ -173,6 +191,24 @@ export default function AS9100Article() {
           </article>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Related Articles</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {blogPosts
+                .filter((p) => p.slug !== post.slug)
+                .map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/blog/${p.slug}`}
+                    className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="text-sm font-semibold text-gray-900">{p.title}</div>
+                    <div className="text-xs text-gray-500 mt-1">{p.readTime}</div>
+                  </Link>
+                ))}
+            </div>
+          </div>
+
+          <div className="mt-8">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-[#17135F] font-semibold hover:underline"

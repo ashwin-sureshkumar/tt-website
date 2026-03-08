@@ -9,7 +9,7 @@ import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "Blog",
+  title: "Blog | CNC Machining & Aerospace Manufacturing Insights",
   description:
     "Insights on precision CNC machining, aerospace manufacturing, material selection, and quality management from the Tru-Tech Precision engineering team.",
   path: "/blog",

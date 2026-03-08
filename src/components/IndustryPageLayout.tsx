@@ -2,7 +2,13 @@ import { PageHeader } from "@/components/PageHeader";
 import { BreadcrumbNav } from "@/components/BreadcrumbNav";
 import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
+import { breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/jsonld";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from "next/link";
 
 export function IndustryPageLayout({
@@ -10,6 +16,7 @@ export function IndustryPageLayout({
   subtitle,
   description,
   path,
+  faqs = [],
   relatedServices,
   children,
 }: {
@@ -17,6 +24,7 @@ export function IndustryPageLayout({
   subtitle: string;
   description: string;
   path: string;
+  faqs?: { question: string; answer: string }[];
   relatedServices: { title: string; href: string }[];
   children: React.ReactNode;
 }) {
@@ -32,6 +40,7 @@ export function IndustryPageLayout({
           { name: title, href: path },
         ])}
       />
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
 
       <PageHeader title={title} subtitle={subtitle} />
       <BreadcrumbNav
@@ -44,6 +53,27 @@ export function IndustryPageLayout({
       <main className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {children}
+
+          {/* FAQ Section */}
+          {faqs.length > 0 && (
+            <section className="mt-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Frequently Asked Questions
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left text-lg font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
 
           {/* Related Services */}
           {relatedServices.length > 0 && (

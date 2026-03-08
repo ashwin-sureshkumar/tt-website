@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/metadata";
 import { CheckCircle, Award, Users, Building } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "About Us",
+  title: "About Tru-Tech Precision | Women-Owned CNC Machining",
   description:
     "Learn about Tru-Tech Precision Inc. — a women-owned precision CNC machining company with 13+ years of experience serving aerospace, nuclear, electronic, and space industries from Mississauga, Ontario.",
   path: "/about",

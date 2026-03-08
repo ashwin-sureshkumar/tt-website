@@ -13,7 +13,7 @@ import {
 import { Shield, Award, FileCheck, Microscope, ClipboardCheck, Search } from "lucide-react";
 
 export const metadata = createMetadata({
-  title: "Quality Assurance",
+  title: "Quality Assurance | AS9100 & ISO 9001 Certified",
   description:
     "AS9100 and ISO 9001 certified quality assurance at Tru-Tech Precision. Comprehensive inspection, complete traceability, and rigorous quality control for every component.",
   path: "/quality-assurance",
