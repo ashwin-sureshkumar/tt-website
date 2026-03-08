@@ -26,6 +26,12 @@ const industries = [
     href: "/industries/space",
     image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80",
   },
+  {
+    title: "Commercial",
+    description: "Precision machined parts for commercial and industrial applications.",
+    href: "/industries/commercial",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+  },
 ];
 
 export function IndustriesOverview() {

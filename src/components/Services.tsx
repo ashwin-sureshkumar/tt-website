@@ -1,4 +1,4 @@
-import { Cog, Gauge, Wrench, Shield } from "lucide-react";
+import { Cog, Gauge, Wrench, Link2 } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -24,11 +24,11 @@ const services = [
     href: "/services/aog-speed-shop",
   },
   {
-    icon: Shield,
-    title: "Quality Assurance",
+    icon: Link2,
+    title: "Supply Chain Management",
     description:
-      "Comprehensive ISO9001:AS9100 quality control processes ensuring every part meets the highest industry standards.",
-    href: "/quality-assurance",
+      "End-to-end supply chain support including material procurement, vendor management, and coordinated delivery to meet your production schedules.",
+    href: "/services/engineering-service",
   },
 ];
 

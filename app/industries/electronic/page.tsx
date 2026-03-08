@@ -137,37 +137,6 @@ export default function ElectronicPage() {
         </div>
       </section>
 
-      {/* Common Electronic Applications */}
-      <section className="mb-16 bg-gray-50 p-8 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Common Electronic Applications
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Our CNC machining services support a broad range of electronic
-          industry applications. Below are some of the most common component
-          types we produce for electronics OEMs and contract manufacturers.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            "Custom enclosures",
-            "Heat sinks",
-            "Connector housings",
-            "Waveguides",
-            "Chassis & frames",
-            "Mounting brackets",
-            "Terminal blocks",
-            "Sensor housings",
-          ].map((item) => (
-            <div
-              key={item}
-              className="bg-white px-4 py-3 rounded text-sm font-medium text-gray-700 text-center"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Why Choose Tru-Tech for Electronics */}
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">

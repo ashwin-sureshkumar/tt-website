@@ -37,6 +37,11 @@ export const industryLinks = [
     href: "/industries/space",
     description: "Components for extreme environments",
   },
+  {
+    title: "Commercial",
+    href: "/industries/commercial",
+    description: "Parts for commercial and industrial applications",
+  },
 ];
 
 export const navItems = [

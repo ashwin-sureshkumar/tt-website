@@ -3,7 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { createMetadata } from "@/lib/metadata";
 import { faqSchema } from "@/lib/jsonld";
 import { serviceLinks } from "@/lib/navigation";
-import { Shield, Plane, FileCheck, Wrench, Cog, CheckCircle, Layers, ClipboardCheck } from "lucide-react";
+import { Shield, Plane, FileCheck, CheckCircle, Layers, ClipboardCheck } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "Aerospace CNC Machining | AS9100 Certified Manufacturer",
@@ -114,41 +114,6 @@ export default function AerospacePage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Common Aerospace Applications */}
-        <section className="mb-16 bg-gray-50 p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Common Aerospace Applications
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Our aerospace CNC machining services support a diverse range of aircraft systems and
-            assemblies. Below are some of the component types we regularly produce for our
-            aerospace customers:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: Wrench, label: "Structural brackets" },
-              { icon: Cog, label: "Fittings" },
-              { icon: Cog, label: "Engine components" },
-              { icon: Wrench, label: "Landing gear parts" },
-              { icon: Shield, label: "Avionics housings" },
-              { icon: Cog, label: "Actuator components" },
-              { icon: Wrench, label: "Fuel system parts" },
-              { icon: ClipboardCheck, label: "Fasteners" },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.label}
-                  className="bg-white px-4 py-4 rounded text-sm font-medium text-gray-700 text-center flex flex-col items-center gap-2"
-                >
-                  <Icon className="w-5 h-5 text-[#17135F]" />
-                  {item.label}
                 </div>
               );
             })}

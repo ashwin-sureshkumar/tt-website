@@ -4,7 +4,6 @@ import { About } from "@/components/About";
 import { QualityAssurance } from "@/components/QualityAssurance";
 import { Gallery } from "@/components/Gallery";
 import { IndustriesOverview } from "@/components/IndustriesOverview";
-import { TrustSignals } from "@/components/TrustSignals";
 import { CTASection } from "@/components/CTASection";
 import { createMetadata } from "@/lib/metadata";
 
@@ -22,7 +21,6 @@ export default function Home() {
       <Services />
       <IndustriesOverview />
       <About />
-      <TrustSignals />
       <QualityAssurance />
       <Gallery />
       <CTASection />

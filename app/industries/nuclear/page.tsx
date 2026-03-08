@@ -5,9 +5,6 @@ import {
   Atom,
   FileCheck,
   Shield,
-  Search,
-  Microscope,
-  CheckCircle,
   ClipboardCheck,
   Crosshair,
 } from "lucide-react";
@@ -123,66 +120,6 @@ export default function NuclearPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Common Nuclear Applications */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Common Nuclear Applications
-        </h2>
-        <p className="text-gray-600 mb-8 text-lg">
-          We manufacture precision-machined components for a wide range of nuclear applications.
-          Our experience covers both standard and custom geometries, and we work closely with
-          engineers and procurement teams to ensure every part meets its design intent and
-          specification requirements.
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            {
-              icon: Atom,
-              label: "Reactor Vessel Components",
-            },
-            {
-              icon: ClipboardCheck,
-              label: "Heat Exchanger Parts",
-            },
-            {
-              icon: Shield,
-              label: "Valve Bodies & Trim",
-            },
-            {
-              icon: Microscope,
-              label: "Pump Components",
-            },
-            {
-              icon: Search,
-              label: "Instrumentation Housings",
-            },
-            {
-              icon: Crosshair,
-              label: "Control Rod Mechanisms",
-            },
-            {
-              icon: FileCheck,
-              label: "Piping Fittings",
-            },
-            {
-              icon: CheckCircle,
-              label: "Radiation Shielding Components",
-            },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg"
-              >
-                <Icon className="w-5 h-5 text-[#17135F] shrink-0" />
-                <span className="text-gray-700 font-medium">{item.label}</span>
               </div>
             );
           })}
