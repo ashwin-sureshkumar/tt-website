@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-22",
     readTime: "5 min read",
     category: "Manufacturing",
-    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80",
+    image: "/assets/matsuura-mx330-5axis.png",
   },
   {
     slug: "choosing-right-material-for-aerospace-parts",
