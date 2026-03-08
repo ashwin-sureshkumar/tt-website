@@ -13,7 +13,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between">
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Precision Engineering Excellence
@@ -30,15 +30,28 @@ export function Hero() {
                 ISO 9001:2015
               </span>
             </div>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#17135F] hover:bg-[#17135F]/90 text-white px-8 py-4 rounded-lg transition-colors text-lg border border-white"
-            >
-              Get a Quote
-            </Link>
+            <div className="flex items-center gap-6">
+              <Link
+                href="/contact"
+                className="inline-block bg-[#17135F] hover:bg-[#17135F]/90 text-white px-8 py-4 rounded-lg transition-colors text-lg border border-white"
+              >
+                Get a Quote
+              </Link>
+              <div className="flex lg:hidden items-center gap-3">
+                <img
+                  src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
+                  alt="AS9100 Aerospace Certification"
+                  className="w-14 h-auto"
+                />
+                <div className="text-white">
+                  <div className="text-xs font-bold">AS9100 Rev D</div>
+                  <div className="text-xs text-gray-300">ISO 9001:2015</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3">
+          <div className="hidden lg:flex flex-col items-center gap-3">
             <img
               src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
               alt="AS9100 Aerospace Certification"
