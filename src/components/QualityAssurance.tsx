@@ -4,7 +4,7 @@ const qualityFeatures = [
   {
     icon: Shield,
     title: 'AS9100 Certified',
-    description: 'Our AS9100 certification ensures the highest quality standards for aerospace and defense manufacturing.',
+    description: 'Our AS9100 certification ensures the highest quality standards for aerospace manufacturing.',
   },
   {
     icon: Award,

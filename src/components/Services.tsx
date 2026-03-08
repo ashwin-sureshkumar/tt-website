@@ -1,4 +1,5 @@
 import { Cog, Gauge, Wrench, Shield } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -6,24 +7,28 @@ const services = [
     title: "CNC Machining",
     description:
       "State-of-the-art CNC machining for complex parts with tight tolerances and superior surface finishes with lathe and 3-5 axis milling.",
+    href: "/services/cnc-machining",
   },
   {
     icon: Gauge,
     title: "Engineering Service",
     description:
-      "We provide engineering service to consult on manufacturability, handle deviation request and material procurement.",
+      "We provide engineering service to consult on manufacturability, handle deviation requests, and material procurement.",
+    href: "/services/engineering-service",
   },
   {
     icon: Wrench,
-    title: "AOG & Speed shop service",
+    title: "AOG & Speed Shop",
     description:
       "Rapid machining service to meet your immediate needs quickly and efficiently.",
+    href: "/services/aog-speed-shop",
   },
   {
     icon: Shield,
     title: "Quality Assurance",
     description:
       "Comprehensive ISO9001:AS9100 quality control processes ensuring every part meets the highest industry standards.",
+    href: "/quality-assurance",
   },
 ];
 
@@ -45,18 +50,19 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                href={service.href}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow group"
               >
                 <div className="w-12 h-12 bg-[#17135F] rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#17135F] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600">{service.description}</p>
-              </div>
+              </Link>
             );
           })}
         </div>

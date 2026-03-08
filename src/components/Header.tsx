@@ -1,22 +1,52 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { serviceLinks, industryLinks } from "@/lib/navigation";
+
+function DropdownItem({
+  href,
+  title,
+  description,
+}: {
+  href: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          href={href}
+          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
+        >
+          <div className="text-sm font-medium text-gray-900">{title}</div>
+          <p className="mt-1 text-sm text-gray-500 leading-snug">
+            {description}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+}
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
+  const [openMobileSection, setOpenMobileSection] = useState<string | null>(
+    null
+  );
 
-  const sectionLink = (id: string, label: string, className: string) => {
-    const href = isHome ? `#${id}` : `/#${id}`;
-    return (
-      <Link href={href} className={className} onClick={() => setIsMenuOpen(false)}>
-        {label}
-      </Link>
-    );
+  const toggleMobileSection = (section: string) => {
+    setOpenMobileSection(openMobileSection === section ? null : section);
   };
 
   return (
@@ -34,22 +64,104 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {sectionLink("home", "Home", "text-gray-700 hover:text-[#17135F] transition-colors")}
-            {sectionLink("services", "Services", "text-gray-700 hover:text-[#17135F] transition-colors")}
-            {sectionLink("about", "About", "text-gray-700 hover:text-[#17135F] transition-colors")}
+          <div className="hidden lg:flex items-center gap-2">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      Home
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-[#17135F] bg-transparent hover:bg-gray-100">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-1 p-2">
+                      {serviceLinks.map((link) => (
+                        <DropdownItem key={link.href} {...link} />
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-[#17135F] bg-transparent hover:bg-gray-100">
+                    Industries
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-1 p-2">
+                      {industryLinks.map((link) => (
+                        <DropdownItem key={link.href} {...link} />
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/about"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      About
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/quality-assurance"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      Quality
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/gallery"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      Gallery
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/blog"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      Blog
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
             <Link
               href="/contact"
-              className="text-gray-700 hover:text-[#17135F] transition-colors"
+              className="ml-4 bg-[#17135F] hover:bg-[#17135F]/90 text-white px-5 py-2 rounded-lg transition-colors text-sm font-medium"
             >
-              Contact
+              Request a Quote
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -62,16 +174,107 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-2">
-            {sectionLink("home", "Home", "block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded")}
-            {sectionLink("services", "Services", "block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded")}
-            {sectionLink("about", "About", "block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded")}
+          <nav className="lg:hidden pb-4 space-y-1">
             <Link
-              href="/contact"
-              className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              href="/"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Home
+            </Link>
+
+            {/* Services Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleMobileSection("services")}
+                className="flex items-center justify-between w-full px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              >
+                Services
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    openMobileSection === "services" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {openMobileSection === "services" && (
+                <div className="pl-6 space-y-1">
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Industries Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleMobileSection("industries")}
+                className="flex items-center justify-between w-full px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              >
+                Industries
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    openMobileSection === "industries" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {openMobileSection === "industries" && (
+                <div className="pl-6 space-y-1">
+                  {industryLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/about"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/quality-assurance"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Quality Assurance
+            </Link>
+            <Link
+              href="/gallery"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/blog"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="block mx-4 mt-2 bg-[#17135F] text-white text-center px-4 py-2 rounded-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Request a Quote
             </Link>
           </nav>
         )}

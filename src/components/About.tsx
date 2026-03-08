@@ -26,8 +26,8 @@ export function About() {
             <p className="text-lg text-gray-600 mb-8">
               Our state-of-the-art facility combines cutting-edge technology with
               expert craftsmanship to deliver precision-engineered components that
-              exceed expectations. We serve aerospace, nuclear, eletronic, and
-              defense industries with unwavering commitment to quality and
+              exceed expectations. We serve aerospace, nuclear, electronic, and
+              space industries with unwavering commitment to quality and
               innovation.
             </p>
 
