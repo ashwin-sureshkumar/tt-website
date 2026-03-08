@@ -1,156 +1,115 @@
-"use client";
-
-import { Mail, Phone, MapPin } from "lucide-react";
-import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-xl text-gray-600">
-            Ready to discuss your next project? Contact us today
-          </p>
+        {/* Contact Methods Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Phone */}
+          <a
+            href="tel:+19058285055"
+            className="group bg-white border border-gray-200 rounded-xl p-8 text-center hover:border-[#17135F] hover:shadow-lg transition-all"
+          >
+            <div className="w-14 h-14 bg-[#17135F] rounded-xl flex items-center justify-center mx-auto mb-5">
+              <Phone className="w-7 h-7 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Call Us</h3>
+            <p className="text-2xl font-bold text-[#17135F] group-hover:underline mb-2">
+              (905) 828-5055
+            </p>
+            <p className="text-sm text-gray-500">Tap to call directly</p>
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:sales@trutechprecision.com"
+            className="group bg-white border border-gray-200 rounded-xl p-8 text-center hover:border-[#17135F] hover:shadow-lg transition-all"
+          >
+            <div className="w-14 h-14 bg-[#17135F] rounded-xl flex items-center justify-center mx-auto mb-5">
+              <Mail className="w-7 h-7 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Email Us</h3>
+            <p className="text-lg font-bold text-[#17135F] group-hover:underline mb-2">
+              sales@trutechprecision.com
+            </p>
+            <p className="text-sm text-gray-500">
+              For quotes and general inquiries
+            </p>
+          </a>
+
+          {/* Hours */}
+          <div className="bg-white border border-gray-200 rounded-xl p-8 text-center">
+            <div className="w-14 h-14 bg-[#17135F] rounded-xl flex items-center justify-center mx-auto mb-5">
+              <Clock className="w-7 h-7 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              Business Hours
+            </h3>
+            <p className="text-gray-700 font-medium mb-1">Monday – Friday</p>
+            <p className="text-2xl font-bold text-[#17135F] mb-2">
+              8:00 AM – 5:00 PM
+            </p>
+            <p className="text-sm text-gray-500">Eastern Time (ET)</p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Contact Information
-            </h3>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#17135F] rounded-lg flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">(905) 828-5055</p>
-                  <p className="text-gray-600">Mon-Fri 8:00 AM - 5:00 PM</p>
-                </div>
+        {/* Location */}
+        <div className="bg-gray-50 rounded-xl p-8 mb-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-[#17135F] rounded-lg flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-white" />
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#17135F] rounded-lg flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">sales@trutechprecision.com</p>
-                  <p className="text-gray-600">hr@trutechprecision.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#17135F] rounded-lg flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
-                  <p className="text-gray-600">Unit 7 - 2576 Dunwin Dr</p>
-                  <p className="text-gray-600">Mississauga, ON L5L 5P6</p>
-                </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  Our Location
+                </h3>
+                <p className="font-semibold text-gray-700">
+                  Tru-Tech Precision Inc.
+                </p>
+                <p className="text-gray-600">Unit 7 - 2576 Dunwin Dr</p>
+                <p className="text-gray-600">Mississauga, ON L5L 5P6, Canada</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Located in Mississauga&apos;s industrial district, easily
+                  accessible from the QEW and Highway 403.
+                </p>
               </div>
             </div>
-          </div>
-
-          <div>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white p-8 rounded-lg shadow-md"
+            <a
+              href="https://www.google.com/maps/dir//Tru-Tech+Precision+Inc.,+2576+Dunwin+Dr+Unit+7,+Mississauga,+ON+L5L+5P6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#17135F] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#17135F]/90 transition-colors shrink-0"
             >
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17135F]"
-                />
-              </div>
+              Get Directions <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
 
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17135F]"
-                />
-              </div>
-
-              <div className="mb-4">
-                <label htmlFor="company" className="block text-gray-700 mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17135F]"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17135F]"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#17135F] hover:bg-[#17135F]/90 text-white py-3 rounded-lg transition-colors border border-white"
-              >
-                Send Message
-              </button>
-            </form>
+        {/* AOG Banner */}
+        <div className="bg-[#17135F] rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-3">
+            Need an Emergency or AOG Part?
+          </h3>
+          <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
+            Our AOG &amp; Speed Shop provides rapid turnaround for urgent
+            machining needs. Call us directly for immediate assistance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+19058285055"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#17135F] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <Phone className="w-5 h-5" /> Call (905) 828-5055
+            </a>
+            <Link
+              href="/services/aog-speed-shop"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Learn About AOG Service
+            </Link>
           </div>
         </div>
       </div>

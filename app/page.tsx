@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { TrustSignals } from "@/components/TrustSignals";
 import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { QualityAssurance } from "@/components/QualityAssurance";
@@ -23,6 +24,7 @@ export default function Home() {
       <About />
       <QualityAssurance />
       <Gallery />
+      <TrustSignals />
       <CTASection />
     </main>
   );
