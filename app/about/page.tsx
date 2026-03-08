@@ -60,8 +60,7 @@ export default function AboutPage() {
               <p className="text-lg text-gray-600">
                 Today, we serve aerospace, nuclear, electronic, and space industries with
                 AS9100 and ISO 9001 certified manufacturing services. With over 1,000 projects
-                completed, our reputation is built on delivering precision parts on time, every time
-                — with a 99.8% on-time delivery rate that speaks to our reliability.
+                completed, our reputation is built on delivering precision parts on time, every time.
               </p>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
@@ -89,11 +88,6 @@ export default function AboutPage() {
                   icon: Users,
                   title: "Women-Owned & Led",
                   desc: "We bring diverse leadership and perspectives to precision manufacturing, driving innovation and partnership.",
-                },
-                {
-                  icon: CheckCircle,
-                  title: "99.8% On-Time Delivery",
-                  desc: "We understand that your production schedules depend on our reliability. Our track record proves we deliver.",
                 },
                 {
                   icon: Building,

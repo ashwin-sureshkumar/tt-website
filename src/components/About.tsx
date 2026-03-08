@@ -4,7 +4,6 @@ const highlights = [
   "ISO 9001:AS9100 Certified",
   "13+ Years of Experience",
   "Advanced CNC Technology",
-  "99.8% On-Time Delivery",
   "Made in Ontario",
   "Women-owned and led",
 ];

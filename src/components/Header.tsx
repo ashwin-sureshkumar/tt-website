@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -50,7 +50,34 @@ export function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed w-full top-0 z-50">
+    <header className="fixed w-full top-0 z-50">
+      {/* Top Contact Bar */}
+      <div className="bg-[#17135F] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5 text-sm">
+          <div className="flex items-center gap-6">
+            <a
+              href="tel:9058285055"
+              className="flex items-center gap-1.5 hover:text-gray-200 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              (905) 828-5055
+            </a>
+            <a
+              href="mailto:sales@trutechprecision.com"
+              className="hidden sm:flex items-center gap-1.5 hover:text-gray-200 transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5" />
+              sales@trutechprecision.com
+            </a>
+          </div>
+          <div className="text-gray-300 text-xs">
+            AS9100 & ISO 9001:2015 Certified
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <div className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
@@ -278,6 +305,7 @@ export function Header() {
             </Link>
           </nav>
         )}
+      </div>
       </div>
     </header>
   );

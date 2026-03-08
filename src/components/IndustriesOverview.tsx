@@ -12,7 +12,7 @@ const industries = [
     title: "Nuclear",
     description: "Nuclear-grade materials with complete traceability and documentation.",
     href: "/industries/nuclear",
-    image: "https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80",
   },
   {
     title: "Electronic",

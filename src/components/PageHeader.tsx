@@ -6,7 +6,7 @@ export function PageHeader({
   subtitle?: string;
 }) {
   return (
-    <section className="relative bg-[#17135F] pt-32 pb-16">
+    <section className="relative bg-[#17135F] pt-40 pb-16">
       <div className="absolute inset-0 bg-gradient-to-br from-[#17135F] to-[#0d0b3a]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">

@@ -12,11 +12,6 @@ const stats = [
     label: "Projects Completed",
   },
   {
-    icon: Award,
-    value: "99.8%",
-    label: "On-Time Delivery",
-  },
-  {
     icon: Users,
     value: "Women",
     label: "Owned & Led",
@@ -28,7 +23,7 @@ export function TrustSignals() {
     <section className="py-16 bg-[#17135F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-3 gap-8 mb-12">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
