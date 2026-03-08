@@ -66,23 +66,6 @@ export function Services() {
             );
           })}
         </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1711418235199-171c8ecb9d12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbmMlMjBtYWNoaW5pbmclMjBtZXRhbHxlbnwxfHx8fDE3Njk3MTM5MDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="CNC machining in action"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1768796372343-99ed316eb5ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFsaXR5JTIwY29udHJvbCUyMG1hbnVmYWN0dXJpbmd8ZW58MXx8fHwxNzY5NjgxMzc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Quality control process"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

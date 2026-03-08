@@ -12,7 +12,7 @@ export function TrustSignals() {
             className="h-20 w-auto"
           />
           <img
-            src="/assets/iso-9001-2015-logo.png"
+            src="/assets/nqa-iso-9001-logo.png"
             alt="ISO 9001:2015 Quality Management System Certification"
             className="h-20 w-auto"
           />
