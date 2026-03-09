@@ -22,7 +22,7 @@ export function Hero() {
               Delivering high-quality manufacturing solutions with unmatched
               precision and reliability
             </p>
-            <p className="text-sm text-gray-300 mb-8">
+            <p className="text-base md:text-lg font-bold text-gray-200 mb-8">
               AS9100 Certified &middot; ISO 9001:2015
             </p>
             <Link
