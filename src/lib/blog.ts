@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-12",
     readTime: "7 min read",
     category: "Quality",
-    image: "/assets/gallery-202512030025.jpg",
+    image: "/assets/gallery-202511270007.jpg",
   },
   {
     slug: "understanding-as9100-certification",
