@@ -6,31 +6,37 @@ const industries = [
     title: "Aerospace",
     description: "AS9100 certified precision components for aircraft and aviation systems.",
     href: "/industries/aerospace",
-    image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&q=80",
+    image: "/assets/industry-aerospace.jpg",
   },
   {
     title: "Nuclear",
     description: "Nuclear-grade materials with complete traceability and documentation.",
     href: "/industries/nuclear",
-    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80",
+    image: "/assets/industry-nuclear.jpg",
   },
   {
     title: "Electronic",
     description: "High-precision components for electronic systems and assemblies.",
     href: "/industries/electronic",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+    image: "/assets/industry-electronic.jpg",
   },
   {
     title: "Space",
     description: "Components engineered for the extreme environments of space.",
     href: "/industries/space",
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80",
+    image: "/assets/industry-space.jpg",
+  },
+  {
+    title: "Marine",
+    description: "Precision components for marine vessels and offshore applications.",
+    href: "/industries/marine",
+    image: "/assets/industry-marine.jpg",
   },
   {
     title: "Commercial",
     description: "Precision machined parts for commercial and industrial applications.",
     href: "/industries/commercial",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+    image: "/assets/industry-railway.jpg",
   },
 ];
 

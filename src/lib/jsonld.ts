@@ -8,7 +8,7 @@ export function organizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/assets/af8bb2b29d9184d4d83751d1fa438bea1a181d56.png`,
     description:
-      "Precision CNC machining and manufacturing for aerospace, nuclear, electronic, and space industries. AS9100 and ISO 9001:2015 certified.",
+      "Precision CNC machining and manufacturing for aerospace, nuclear, electronic, space, marine, and commercial industries. AS9100 and ISO 9001:2015 certified.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Unit 7 - 2576 Dunwin Dr",

@@ -38,6 +38,11 @@ export const industryLinks = [
     description: "Components for extreme environments",
   },
   {
+    title: "Marine",
+    href: "/industries/marine",
+    description: "Components for marine vessels and offshore systems",
+  },
+  {
     title: "Commercial",
     href: "/industries/commercial",
     description: "Parts for commercial and industrial applications",
