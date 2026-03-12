@@ -7,9 +7,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Tru-Tech Precision Inc. - Manufacturing Excellence",
+  title: "Tru-Tech Precision Inc. - Precision Parts Manufacturer",
   icons: {
     icon: "/assets/e560eb1a9ea8c65afcffc2a9ff017086b44f2055.png",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://www.trutechprecision.com/assets/af8bb2b29d9184d4d83751d1fa438bea1a181d56.png",
+      },
+    ],
   },
 };
 
