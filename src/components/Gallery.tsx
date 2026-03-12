@@ -3,20 +3,20 @@ import { ArrowRight } from "lucide-react";
 
 const galleryImages = [
   {
-    url: "/assets/dbb72e773d50dc8fe7b483bd97200ade80613d28.png",
-    alt: "Precision machined aerospace bracket",
+    url: "/assets/gallery-202511270007.jpg",
+    alt: "Precision machined block assemblies with threaded bores",
   },
   {
-    url: "/assets/975f7e5a6f4a3a9d57d89074890e552ea75a2c1a.png",
-    alt: "CNC machined threaded shaft component",
+    url: "/assets/gallery-202512030027.jpg",
+    alt: "Complex anodized ring with internal profile machining",
   },
   {
-    url: "/assets/a8e8e9a0072478ad9238d8c4dad6406cb4a944a3.png",
-    alt: "Custom metal bracket with mounting holes",
+    url: "/assets/gallery-202512030038.jpg",
+    alt: "Brass manifold plate with precision-bored holes",
   },
   {
-    url: "/assets/ae94597534e4748a6db29d32abadf63f90848517.png",
-    alt: "Complex machined circular component",
+    url: "/assets/gallery-202512030025.jpg",
+    alt: "Anodized retaining ring with slotted features",
   },
 ];
 

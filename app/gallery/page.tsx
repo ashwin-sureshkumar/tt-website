@@ -14,6 +14,51 @@ export const metadata = createMetadata({
 
 const galleryImages = [
   {
+    url: "/assets/gallery-202511270007.jpg",
+    alt: "Precision machined block assemblies with threaded bores",
+    category: "CNC Milling",
+  },
+  {
+    url: "/assets/gallery-202512030027.jpg",
+    alt: "Complex anodized ring with internal profile machining",
+    category: "5-Axis Machining",
+  },
+  {
+    url: "/assets/gallery-202512030038.jpg",
+    alt: "Brass manifold plate with precision-bored holes",
+    category: "CNC Milling",
+  },
+  {
+    url: "/assets/gallery-202512030025.jpg",
+    alt: "Anodized retaining ring with slotted features",
+    category: "Anodized Parts",
+  },
+  {
+    url: "/assets/gallery-202512030032.jpg",
+    alt: "Anodized structural link bracket",
+    category: "CNC Milling",
+  },
+  {
+    url: "/assets/gallery-202512030037.jpg",
+    alt: "Brass flange plate with mounting holes",
+    category: "CNC Milling",
+  },
+  {
+    url: "/assets/gallery-202512030029.jpg",
+    alt: "Anodized precision handle bracket",
+    category: "CNC Milling",
+  },
+  {
+    url: "/assets/gallery-202512030018.jpg",
+    alt: "Precision turned stainless steel nozzle",
+    category: "CNC Turning",
+  },
+  {
+    url: "/assets/gallery-202512030023.jpg",
+    alt: "Micro precision turned component",
+    category: "CNC Turning",
+  },
+  {
     url: "/assets/dbb72e773d50dc8fe7b483bd97200ade80613d28.png",
     alt: "Precision machined aerospace bracket",
     category: "Aerospace",
