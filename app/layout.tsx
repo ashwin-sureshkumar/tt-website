@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/assets/e560eb1a9ea8c65afcffc2a9ff017086b44f2055.png",
   },
+  openGraph: {
+    images: [
+      {
+        url: "https://www.trutechprecision.com/assets/af8bb2b29d9184d4d83751d1fa438bea1a181d56.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
