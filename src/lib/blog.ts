@@ -10,6 +10,16 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "external-processing-anodizing-passivation-and-approved-suppliers",
+    title: "External Processing: Anodizing, Passivation & Working with Approved Suppliers",
+    description:
+      "How Tru-Tech manages external processing like anodizing, passivation, and plating through approved supplier lists and customer-driven requirements including NADCAP.",
+    date: "2026-03-12",
+    readTime: "7 min read",
+    category: "Quality",
+    image: "/assets/gallery-202512030025.jpg",
+  },
+  {
     slug: "understanding-as9100-certification",
     title: "Understanding AS9100 Certification: What It Means for Your Supply Chain",
     description:
