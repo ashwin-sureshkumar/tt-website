@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Tru-Tech Precision Inc. - Manufacturing Excellence",
+  title: "Tru-Tech Precision Inc. - Precision Parts Manufacturer",
   icons: {
     icon: "/assets/e560eb1a9ea8c65afcffc2a9ff017086b44f2055.png",
   },

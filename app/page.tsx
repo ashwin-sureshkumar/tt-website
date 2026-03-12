@@ -9,7 +9,7 @@ import { CTASection } from "@/components/CTASection";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Tru-Tech Precision Inc. - Manufacturing Excellence",
+  title: "Tru-Tech Precision Inc. - Precision Parts Manufacturer",
   description:
     "Precision CNC machining and manufacturing for aerospace, nuclear, electronic, and space industries. AS9100 and ISO 9001:2015 certified. Located in Mississauga, Ontario.",
   path: "/",
