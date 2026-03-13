@@ -10,6 +10,16 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "sub-contracting-support-for-oems-and-tier-1-suppliers",
+    title: "Sub-Contracting: How Tru-Tech Supports OEMs and Tier-1 Suppliers",
+    description:
+      "How Tru-Tech Precision operates as a reliable sub-contract manufacturing partner for OEMs and Tier-1 suppliers across aerospace, nuclear, marine, and commercial industries.",
+    date: "2026-03-12",
+    readTime: "7 min read",
+    category: "Manufacturing",
+    image: "/assets/gallery-202512030038.jpg",
+  },
+  {
     slug: "external-processing-anodizing-passivation-and-approved-suppliers",
     title: "External Processing: Anodizing, Passivation & Working with Approved Suppliers",
     description:
