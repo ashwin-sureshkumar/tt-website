@@ -152,8 +152,8 @@ export default function AboutPage() {
               <div>
                 <p className="text-lg text-gray-600 mb-4">
                   Our Mississauga facility houses a comprehensive range of CNC equipment including
-                  multi-axis milling centers, CNC turning centers with live tooling, and precision
-                  grinding equipment. The facility is temperature-controlled for consistent machining
+                  multi-axis milling centers and CNC turning centers. The facility is
+                  temperature-controlled for consistent machining
                   accuracy and equipped with modern inspection equipment including CMM capabilities.
                 </p>
                 <p className="text-lg text-gray-600">

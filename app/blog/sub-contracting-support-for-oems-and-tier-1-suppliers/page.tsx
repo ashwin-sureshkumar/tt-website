@@ -161,8 +161,8 @@ export default function SubContractingArticle() {
             <h3>Access to Specialized Capabilities</h3>
             <p>
               Not every OEM maintains every type of machining capability in-house. Our equipment
-              includes 3-axis, 4-axis, and 5-axis CNC milling centers, CNC lathes with live tooling,
-              and precision grinding — giving you access to capabilities that may not exist on your
+              includes 3-axis, 4-axis, and 5-axis CNC milling centers and CNC lathes — giving
+              you access to capabilities that may not exist on your
               shop floor. For complex geometries or tight-tolerance work that requires multi-axis
               machining, sub-contracting to a specialist is often more effective than investing in
               equipment and training for occasional needs.

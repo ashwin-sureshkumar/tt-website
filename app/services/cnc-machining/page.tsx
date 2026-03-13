@@ -71,7 +71,7 @@ const faqs = [
   {
     question: "Do you provide surface finishing services?",
     answer:
-      "Yes, we offer several in-house finishing options including deburring, bead blasting, and precision grinding. We also coordinate anodizing, plating, painting, passivation, and heat treatment through our network of qualified vendors with full traceability maintained.",
+      "Yes, we offer several in-house finishing options including deburring and bead blasting. We also coordinate anodizing, plating, painting, passivation, and heat treatment through our network of qualified vendors with full traceability maintained.",
   },
   {
     question: "What is your typical lead time for CNC machined parts?",
