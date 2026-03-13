@@ -57,5 +57,6 @@ export const navItems = [
   { title: "Quality Assurance", href: "/quality-assurance" },
   { title: "Gallery", href: "/gallery" },
   { title: "Blog", href: "/blog" },
+  { title: "Careers", href: "/careers" },
   { title: "Contact", href: "/contact" },
 ];
