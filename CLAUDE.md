@@ -7,7 +7,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Tru-Tech Precision Inc. marketing website — a Next.js app with Tailwind CSS v4. The original Figma file: https://www.figma.com/design/FUFeZDYTpBYjHbgl2Du2jL/Tru-Tech-Website
 
 ## Commands
-
 - `npm install` — install dependencies (use `--legacy-peer-deps` if needed)
 - `npm run dev` — start dev server on port 3000
 - `npm run build` — production build (static export to `out/`)
