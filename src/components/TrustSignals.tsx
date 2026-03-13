@@ -12,14 +12,19 @@ export function TrustSignals() {
             className="h-20 md:h-20 w-auto"
           />
           <img
-            src="/assets/ontario-made-logo.png"
-            alt="Ontario Made - Certified Ontario Manufacturer"
-            className="h-16 md:h-20 w-auto"
+            src="/assets/canada-made-logo.png"
+            alt="Made in Canada"
+            className="h-16 md:h-20 w-auto invert"
           />
           <img
             src="/assets/ctma-logo.jpg"
             alt="CTMA - Canadian Tooling & Machining Association"
             className="h-12 md:h-12 w-auto"
+          />
+          <img
+            src="/assets/dair-logo.png"
+            alt="DAIR - Downsview Aerospace Innovation & Research"
+            className="h-10 md:h-14 w-auto invert"
           />
         </div>
       </div>
