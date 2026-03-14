@@ -241,12 +241,9 @@ export default function CareersPage() {
                 Send us your resume and tell us how you can contribute to our
                 team.
               </p>
-              <a
-                href="mailto:hr@trutechprecision.com?subject=General%20Application"
-                className="inline-block border-2 border-[#17135F] text-[#17135F] px-6 py-3 rounded-lg font-semibold hover:bg-[#17135F] hover:text-white transition-colors"
-              >
-                Send Your Resume
-              </a>
+              <p className="text-[#17135F] font-semibold text-lg">
+                hr@trutechprecision.com
+              </p>
             </div>
           </section>
 
@@ -260,12 +257,9 @@ export default function CareersPage() {
                 <Mail className="w-6 h-6 text-[#17135F]" />
                 <p className="text-lg text-gray-900">
                   Email your application to{" "}
-                  <a
-                    href="mailto:hr@trutechprecision.com"
-                    className="text-[#17135F] font-semibold hover:underline"
-                  >
+                  <span className="text-[#17135F] font-semibold">
                     hr@trutechprecision.com
-                  </a>
+                  </span>
                 </p>
               </div>
               <div className="mb-6">
@@ -309,12 +303,9 @@ export default function CareersPage() {
             Send us your resume and let&apos;s start a conversation about your
             future at Tru-Tech Precision.
           </p>
-          <a
-            href="mailto:hr@trutechprecision.com?subject=Career%20Inquiry"
-            className="inline-block bg-white text-[#17135F] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Contact HR
-          </a>
+          <p className="text-2xl font-semibold text-white">
+            hr@trutechprecision.com
+          </p>
         </div>
       </section>
     </>

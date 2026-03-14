@@ -6,12 +6,10 @@ import { createMetadata } from "@/lib/metadata";
 import { jobPostings } from "@/lib/careers";
 import {
   MapPin,
-  Clock,
   Briefcase,
   CheckCircle,
   Star,
   ArrowLeft,
-  Mail,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -131,17 +129,13 @@ export default function CNCMachinistPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
               Ready to Apply?
             </h2>
-            <p className="text-gray-600 mb-6">
-              Send your resume and a brief cover letter to our HR team.
+            <p className="text-gray-600 mb-2">
+              Send your resume and a brief cover letter to:
             </p>
-            <a
-              href={`mailto:hr@trutechprecision.com?subject=Application%20-%20${encodeURIComponent(job.title)}`}
-              className="inline-flex items-center gap-2 bg-[#17135F] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#0d0b3a] transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              Apply Now
-            </a>
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-xl font-semibold text-[#17135F] mb-4">
+              hr@trutechprecision.com
+            </p>
+            <p className="text-sm text-gray-500">
               Tru-Tech Precision Inc. is an equal opportunity employer.
             </p>
           </section>
