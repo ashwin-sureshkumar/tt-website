@@ -174,6 +174,17 @@ export function Header() {
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/careers"
+                      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#17135F] transition-colors"
+                    >
+                      Careers
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
 
@@ -295,6 +306,13 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              href="/careers"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Careers
             </Link>
             <Link
               href="/contact"

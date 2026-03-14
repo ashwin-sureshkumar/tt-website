@@ -3,6 +3,8 @@ import { BreadcrumbNav } from "@/components/BreadcrumbNav";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
 import { createMetadata } from "@/lib/metadata";
+import { jobPostings } from "@/lib/careers";
+import Link from "next/link";
 import {
   DollarSign,
   GraduationCap,
@@ -15,11 +17,11 @@ import {
   Star,
   MapPin,
   Heart,
-  Wrench,
   Mail,
   FileText,
   Briefcase,
   Clock,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata = createMetadata({
@@ -28,6 +30,39 @@ export const metadata = createMetadata({
     "Join Tru-Tech Precision Inc. — a women-owned precision CNC machining company. Explore open positions in CNC machining and quality assurance. Build your career in aerospace and nuclear manufacturing.",
   path: "/careers",
 });
+
+const whyWorkHere = [
+  {
+    icon: Heart,
+    title: "Women-Owned & Led",
+    desc: "Be part of a company that champions diversity and brings unique perspectives to precision manufacturing.",
+  },
+  {
+    icon: Rocket,
+    title: "Work on What Matters",
+    desc: "Manufacture components for aerospace, nuclear, space, and marine applications — your work has real impact.",
+  },
+  {
+    icon: Award,
+    title: "AS9100 Certified Environment",
+    desc: "Learn and practice industry-leading quality standards in an aerospace-certified facility.",
+  },
+  {
+    icon: Star,
+    title: "Small Team, High Impact",
+    desc: "Your contributions are visible and valued. Every team member plays a critical role in our success.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Growth & Development",
+    desc: "We invest in our people with training, skill development, and opportunities to advance.",
+  },
+  {
+    icon: MapPin,
+    title: "Mississauga Location",
+    desc: "Accessible, modern facility in Mississauga — a hub for Canadian manufacturing excellence.",
+  },
+];
 
 const benefits = [
   {
@@ -62,21 +97,6 @@ const benefits = [
   },
 ];
 
-const openPositions = [
-  {
-    title: "CNC Machinist",
-    type: "Full-time",
-    description:
-      "Operate and program CNC turning centers and multi-axis milling machines to produce precision components for aerospace, nuclear, and space industries. Experience with tight tolerances and complex geometries preferred.",
-  },
-  {
-    title: "Quality Assurance Inspector",
-    type: "Full-time",
-    description:
-      "Inspect precision-machined components using CMM and manual inspection tools. Ensure compliance with AS9100 quality standards and customer specifications. Experience with aerospace quality systems is an asset.",
-  },
-];
-
 export default function CareersPage() {
   return (
     <>
@@ -103,44 +123,27 @@ export default function CareersPage() {
 
       <main className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Intro */}
+          <section className="mb-16 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 leading-relaxed">
+              At Tru-Tech Precision, you won&apos;t just have a job — you&apos;ll have a career
+              building critical components for aerospace, nuclear, and space industries. We&apos;re
+              a small, tight-knit team where your skills and contributions directly impact our
+              success. If you take pride in precision work and want to grow with a company that
+              invests in its people, we want to hear from you.
+            </p>
+          </section>
+
           {/* Why Work at Tru-Tech */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">
               Why Work at Tru-Tech?
             </h2>
+            <p className="text-gray-500 text-center mb-8 max-w-2xl mx-auto">
+              More than a machine shop — a place to build your career
+            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Heart,
-                  title: "Women-Owned & Led",
-                  desc: "Be part of a company that champions diversity and brings unique perspectives to precision manufacturing.",
-                },
-                {
-                  icon: Rocket,
-                  title: "Work on What Matters",
-                  desc: "Manufacture components for aerospace, nuclear, space, and marine applications — your work has real impact.",
-                },
-                {
-                  icon: Award,
-                  title: "AS9100 Certified Environment",
-                  desc: "Learn and practice industry-leading quality standards in an aerospace-certified facility.",
-                },
-                {
-                  icon: Star,
-                  title: "Small Team, High Impact",
-                  desc: "Your contributions are visible and valued. Every team member plays a critical role in our success.",
-                },
-                {
-                  icon: GraduationCap,
-                  title: "Growth & Development",
-                  desc: "We invest in our people with training, skill development, and opportunities to advance.",
-                },
-                {
-                  icon: MapPin,
-                  title: "Mississauga Location",
-                  desc: "Accessible, modern facility in Mississauga — a hub for Canadian manufacturing excellence.",
-                },
-              ].map((item, i) => {
+              {whyWorkHere.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <div
@@ -163,59 +166,69 @@ export default function CareersPage() {
           </section>
 
           {/* What We Offer */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              What We Offer
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="bg-gray-50 p-6 rounded-lg text-center">
-                    <div className="w-12 h-12 mx-auto bg-[#17135F] rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-white" />
+          <section className="mb-16 bg-gray-50 py-12 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">
+                What We Offer
+              </h2>
+              <p className="text-gray-500 text-center mb-8 max-w-2xl mx-auto">
+                Benefits and perks of joining the Tru-Tech team
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefits.map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="bg-white p-6 rounded-lg text-center shadow-sm">
+                      <div className="w-12 h-12 mx-auto bg-[#17135F] rounded-lg flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600">{item.desc}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600">{item.desc}</p>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </section>
 
           {/* Open Positions */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">
               Open Positions
             </h2>
+            <p className="text-gray-500 text-center mb-8 max-w-2xl mx-auto">
+              Join our growing team of precision manufacturing professionals
+            </p>
             <div className="grid md:grid-cols-2 gap-8">
-              {openPositions.map((position, i) => (
-                <div
-                  key={i}
-                  className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              {jobPostings.map((job) => (
+                <Link
+                  key={job.slug}
+                  href={`/careers/${job.slug}`}
+                  className="group border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-[#17135F]/20 transition-all"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <Briefcase className="w-5 h-5 text-[#17135F]" />
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {position.title}
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#17135F] transition-colors">
+                      {job.title}
                     </h3>
                   </div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Clock className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-500">
-                      {position.type}
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="flex items-center gap-1.5 text-sm text-gray-500">
+                      <Clock className="w-4 h-4" />
+                      {job.type}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-sm text-gray-500">
+                      <MapPin className="w-4 h-4" />
+                      {job.location}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-6">{position.description}</p>
-                  <a
-                    href="mailto:hr@trutechprecision.com?subject=Application%20-%20{position.title}"
-                    className="inline-block bg-[#17135F] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0d0b3a] transition-colors"
-                  >
-                    Apply Now
-                  </a>
-                </div>
+                  <p className="text-gray-600 mb-4">{job.summary}</p>
+                  <span className="inline-flex items-center gap-1 text-[#17135F] font-semibold text-sm group-hover:gap-2 transition-all">
+                    View Details <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
               ))}
             </div>
 
