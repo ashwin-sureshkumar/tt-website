@@ -5,7 +5,7 @@ export function TrustSignals() {
         <p className="text-center text-xs md:text-sm text-gray-400 uppercase tracking-wider mb-4 md:mb-8">
           Certified &amp; Trusted
         </p>
-        <div className="flex items-center justify-center gap-6 md:gap-16">
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-16">
           <img
             src="/assets/1458f26437ca425f03f4b0d18ae3ec02eeae4c05.png"
             alt="NQA AS9100 Rev D Aerospace & Defense Certification - ISO 9001:2015"

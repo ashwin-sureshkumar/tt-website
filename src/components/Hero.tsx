@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section id="home" className="pt-24">
+    <section id="home" className="pt-28 md:pt-24">
       <div className="relative h-[450px] md:h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <img
