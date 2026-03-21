@@ -10,6 +10,16 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "receiving-inspection-as9100-accepting-and-rejecting-parts",
+    title: "Receiving Inspection Under AS9100: Accepting and Rejecting Parts",
+    description:
+      "How receiving inspection works under AS9100, what happens when material is accepted or rejected, and why this quality gate is critical to aerospace manufacturing.",
+    date: "2026-03-20",
+    readTime: "8 min read",
+    category: "Quality",
+    image: "/assets/gallery-202511270007.jpg",
+  },
+  {
     slug: "sub-contracting-support-for-oems-and-tier-1-suppliers",
     title: "Sub-Contracting: How Tru-Tech Supports OEMs and Tier-1 Suppliers",
     description:
