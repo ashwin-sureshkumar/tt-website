@@ -9,18 +9,6 @@ const industries = [
     image: "/assets/industry-aerospace.jpg",
   },
   {
-    title: "Nuclear",
-    description: "Nuclear-grade materials with complete traceability and documentation.",
-    href: "/industries/nuclear",
-    image: "/assets/industry-nuclear.jpg",
-  },
-  {
-    title: "Electronic",
-    description: "High-precision components for electronic systems and assemblies.",
-    href: "/industries/electronic",
-    image: "/assets/industry-electronic.jpg",
-  },
-  {
     title: "Space",
     description: "Components engineered for the extreme environments of space.",
     href: "/industries/space",
@@ -31,6 +19,18 @@ const industries = [
     description: "Precision components for marine vessels and offshore applications.",
     href: "/industries/marine",
     image: "/assets/industry-marine.jpg",
+  },
+  {
+    title: "Nuclear",
+    description: "Nuclear-grade materials with complete traceability and documentation.",
+    href: "/industries/nuclear",
+    image: "/assets/industry-nuclear.jpg",
+  },
+  {
+    title: "Electronic",
+    description: "High-precision components for electronic systems and assemblies.",
+    href: "/industries/electronic",
+    image: "/assets/industry-electronic.jpg",
   },
   {
     title: "Commercial",
