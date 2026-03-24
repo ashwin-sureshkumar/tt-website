@@ -10,6 +10,16 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "controlled-goods-program-cgp-certification",
+    title: "Controlled Goods Program (CGP): What It Means and How Tru-Tech Can Support Your Defence Supply Chain",
+    description:
+      "Tru-Tech Precision is now CGP-certified. Learn what the Controlled Goods Program is, why it matters for defence and aerospace manufacturing, and how our certification supports your controlled goods requirements.",
+    date: "2026-03-24",
+    readTime: "7 min read",
+    category: "Quality",
+    image: "/assets/gallery-202511270007.jpg",
+  },
+  {
     slug: "receiving-inspection-as9100-accepting-and-rejecting-parts",
     title: "Receiving Inspection Under AS9100: Accepting and Rejecting Parts",
     description:
