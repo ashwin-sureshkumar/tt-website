@@ -23,7 +23,7 @@ export function Hero() {
               precision and reliability
             </p>
             <p className="text-base md:text-lg font-bold text-gray-200 mb-8">
-              AS9100 Certified &middot; ISO 9001:2015
+              AS9100 Certified &middot; ISO 9001:2015 &middot; Controlled Goods Program
             </p>
             <Link
               href="/contact"

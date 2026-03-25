@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 72" fill="none">
+  <rect x="1.5" y="1.5" width="177" height="69" rx="4" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="90" y="24" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">CONTROLLED GOODS</text>
+  <text x="90" y="38" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">PROGRAM</text>
+  <line x1="30" y1="46" x2="150" y2="46" stroke="#ffffff" stroke-width="0.5" opacity="0.4"/>
+  <text x="90" y="59" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle" letter-spacing="0.5" opacity="0.7">GOVERNMENT OF CANADA</text>
+</svg>
