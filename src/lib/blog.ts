@@ -10,6 +10,16 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "collaborative-engineering-working-with-your-design-team",
+    title: "Collaborative Engineering: How Tru-Tech Works with Your Design Team for Better Outcomes",
+    description:
+      "How Tru-Tech's engineering team collaborates with customer designers to optimize parts for manufacturability, reduce cost, and deliver better results through early involvement and open communication.",
+    date: "2026-03-24",
+    readTime: "8 min read",
+    category: "Engineering",
+    image: "/assets/gallery-202512030038.jpg",
+  },
+  {
     slug: "receiving-inspection-as9100-accepting-and-rejecting-parts",
     title: "Receiving Inspection Under AS9100: Accepting and Rejecting Parts",
     description:
