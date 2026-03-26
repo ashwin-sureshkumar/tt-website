@@ -12,9 +12,9 @@ export function TrustSignals() {
             className="h-16 md:h-20 w-auto mx-auto"
           />
           <img
-            src="/assets/cgp-logo.svg"
+            src="/assets/cgp-logo.jpg"
             alt="Controlled Goods Program - Government of Canada"
-            className="h-14 md:h-16 w-auto mx-auto"
+            className="h-14 md:h-16 w-auto mx-auto rounded-full"
           />
           <img
             src="/assets/canada-made-logo.png"
