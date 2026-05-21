@@ -4,7 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/jsonld";
 import { createMetadata } from "@/lib/metadata";
-import { CheckCircle, Award, Users, Building } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "About Tru-Tech Precision | Women-Owned CNC Machining",
@@ -69,43 +69,6 @@ export default function AboutPage() {
                 alt="Tru-Tech Precision manufacturing facility"
                 className="w-full h-full object-cover"
               />
-            </div>
-          </section>
-
-          {/* Values */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              What Sets Us Apart
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: Award,
-                  title: "Quality First",
-                  desc: "AS9100 and ISO 9001 certified. Quality is not just a department — it is embedded in every process and every person at Tru-Tech.",
-                },
-                {
-                  icon: Users,
-                  title: "Women-Owned & Led",
-                  desc: "We bring diverse leadership and perspectives to precision manufacturing, driving innovation and partnership.",
-                },
-                {
-                  icon: Building,
-                  title: "Made in Ontario",
-                  desc: "Our Mississauga facility combines Canadian manufacturing excellence with proximity to major aerospace and industrial hubs.",
-                },
-              ].map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="bg-gray-50 p-6 rounded-lg text-center">
-                    <div className="w-12 h-12 mx-auto bg-[#17135F] rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                    <p className="text-gray-600">{item.desc}</p>
-                  </div>
-                );
-              })}
             </div>
           </section>
 
